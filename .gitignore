@@ -1,0 +1,22 @@
+# Python 缓存文件
+__pycache__/
+*.pyc
+*.pyo
+
+# 训练日志和输出目录
+runs/
+
+# 大型模型权重文件 (绝对不能直接传！)
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# 数据集文件夹 (如果很大，也不该传)
+images/
+labels/
+
+# 其他可能的临时文件
+*.log
+train.txt
+val.txt
