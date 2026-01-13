@@ -1,0 +1,39 @@
+# YOLO11 Pose Dataset Configuration for Rune Detection
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: c:\Users\xzx15\Desktop\render_split  # dataset root dir
+train: images/train  # train images dir (relative to 'path')
+val: images/val  # val images dir (relative to 'path')
+test:  # test images (optional)
+
+# Number of classes
+nc: 2
+
+# Keypoint settings
+kpt_shape: [9, 3]  # [number of keypoints, number of dims] (9 keypoints for rune armor module)
+
+# Class names
+names:
+  0: rune_center
+  1: armor_module
+
+# Keypoint names (for visualization)
+kpt_names:
+  - center_top
+  - center_bottom
+  - left_top
+  - left_bottom
+  - right_top
+  - right_bottom
+  - led_top
+  - led_middle
+  - led_bottom
+
+# Keypoint connections (for visualization)
+kpt_connections:
+  - [0, 1]  # center vertical line
+  - [2, 3]  # left vertical line
+  - [4, 5]  # right vertical line
+  - [2, 4]  # top horizontal line
+  - [3, 5]  # bottom horizontal line
+  - [6, 7, 8]  # LED vertical line
